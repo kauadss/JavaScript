@@ -1,0 +1,52 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    border: none;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.curso{
+    display: flex;
+    justify-content: center;
+    width: 200px;
+    border: 4px solid #888;
+    border-radius: 10px;
+    pad: 10px;
+    margin: 5px 0px;
+    cursor: pointer;
+}
+
+.selecionado{
+    background-color: rgb(82, 0, 0) !important;
+    color: white !important;
+    border-color: red !important;
+}
+
+.c1{
+    background-color: white;
+    color: #444;
+}
+
+.c2{
+    background-color: #444;
+    color: #ccc;
+}
+
+.caixa{
+    border: 4px solid black;
+    background-color: #eee;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    height: 500px;
+    width: 300px;
+}
