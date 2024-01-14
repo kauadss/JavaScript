@@ -17,7 +17,29 @@ class Bola{
         this.b=Math.floor(Math.random()*255)
         this.px=Math.floor(Math.random()*(LarguraPalco-this.tam))
         this.py=Math.floor(Math.random()*(AlturaPalco-this.tam))
+        this.velx=Math.floor(Math.random()*2)+0.5
+        this.vely=Math.floor(Math.random()+2)+0.5
+        this.dirx=(Math.randon()*10)>5?1:-1
+        this.diry=(Math.randon()*10)>5?1:-1
+        this.palco=palco
+        this.arrayBolas=arrayBolas
+        this.id=Date.now()+"_"+Math.floor(Math.random()*100000000)
+        this.desenhar()
+        this.controle=setInterval(this.controlar,10)
+        this.eu=document.getElementById(this.id)
     }
+
+MinhaPos=()=>{
+}
+
+remover=()=>{
+}
+
+desenhar=()=>{  
+}
+
+controlar=()=>{
+}
 
 }
 
