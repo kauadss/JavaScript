@@ -6,6 +6,11 @@ console.log(b)
 console.log(c)
 console.log(d)
 
+let obj={nome:"Kauã",canal:"Sr.K",curso:"JavaScript"}
+let {nome,canal}=obj
+console.log(nome)
+console.log(canal);
+
 const cores=()=>{
     return ["verde","amarelo","vermelho","azul"]
 }
