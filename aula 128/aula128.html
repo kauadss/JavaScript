@@ -1,28 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Aula 128</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-    <div style="width: 300px; height: 300px;">
-        <canvas id="grafico" style="width: 300px; height: 300px;"></canvas>
-    </div>
+    <div style="width: 300px; width: 300px;">
+        <canvas id="Grafico"></canvas>
+      </div>
 
-    <script>
-        const ctx = document.getElementById('grafico');
+      <script>
+        const ctx = document.getElementById('Grafico');
       
-        let Labels=["Brasil","Japão","Russia","USA","Africa"]
-        let valores=[10,20,30,40]
+        let Labels=["Disponibilidade","Qualidade","Performace"]
+        let valores=[0,0,0]
 
-        new Chart(ctx, {
+        let grafico1=new Chart(ctx, {
           type: 'bar',
           data: {
             labels: Labels,
             datasets: [{
-              label: 'Valores',
+              label: '# of Votes',
               data: valores,
               borderWidth: 1
             }]
@@ -35,7 +35,24 @@
             }
           }
         });
+        const obterDados=()=>{
+        const endpoint="https://696a4d85-3ab5-4fff-8767-c74c3aa19421-00-2qpx9zoyw8e4k.picard.replit.dev"
+        fetch(endpoint)
+        .then(res=>res.json())
+        .then(res=>{
+            valores[0]=res.disponibilidade
+            valores[1]=res.qualidade
+            valores[2]=res.performance
+            grafico1.update()
+
+        })
+        .catch(erro=>{
+            console.log("ERRO" + erro)
+        })
+    }
+
+    let intervalo=setInterval(obterDados,3000)
       </script>
+
 </body>
 </html>
-
