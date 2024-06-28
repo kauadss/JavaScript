@@ -19,7 +19,7 @@ let dados={
     }
 }
 const buscarDados=()=>{
-const endpoint="https://replit.com/@kauasobral90/curso"
+const endpoint="https://696a4d85-3ab5-4fff-8767-c74c3aa19421-00-2qpx9zoyw8e4k.picard.replit.dev/"
 fetch(endpoint)
 .then(res=>res.json())
 .then(res=>{
